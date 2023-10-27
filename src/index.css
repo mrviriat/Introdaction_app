@@ -91,10 +91,8 @@ label {
 .image  {
   display: flex;
   justify-content: center;
-  /* padding-left: 5vw; */
   height: 8em;
   margin-bottom: 1em;
-
   img {
     height: 100%;
     width: 100%;
