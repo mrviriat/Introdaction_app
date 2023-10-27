@@ -49,8 +49,10 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 30px;
+  padding-bottom: 30px;
   /* min-width: 100%;
   min-height: 100%;
   justify-content: center;
@@ -86,13 +88,18 @@ label {
   color: rgb(34, 34, 34);
 }
 
-.image {
+.image  {
+  display: flex;
+  justify-content: center;
+  /* padding-left: 5vw; */
   height: 8em;
   margin-bottom: 1em;
+
   img {
-    width: 100%;
     height: 100%;
+    width: 100%;
   }
+
 }
 
 table {
@@ -109,7 +116,7 @@ table {
 
 
 
-.form{
+.form {
   box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
   background-color: white;
   border-radius: 5px;
@@ -119,23 +126,23 @@ table {
   /* height: 600px; */
 }
 
-.form-body{
+.form-body {
   text-align: left;
   padding: 20px 10px;
 }
 
-.form-body > *{
+.form-body>* {
   padding: 5px;
 }
 
-.form__label{
+.form__label {
   width: 40%;
 }
 
-.form_input{
+.form_input {
   width: 60%;
 }
 
-.footer{
+.footer {
   text-align: center;
 }

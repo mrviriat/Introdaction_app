@@ -1,10 +1,25 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import loginImg from "../images/login.svg";
 import reg from "../images/reg.svg";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
+import LogIn from '../images/login.svg';
+import SignUp from '../images/reg.svg';
 
 export default function Atuh(props) {
+
+    const preloadSrcList = [
+        LogIn,
+        SignUp
+    ]
+
+    useEffect(() => {
+        preloadSrcList.forEach((svg) => {
+          const img = new Image();
+          img.src = svg;
+        });
+      }, []);
+
     let [authMode, setAuthMode] = useState("signin")
 
     let [_name, setName] = useState(null)
@@ -77,7 +92,7 @@ export default function Atuh(props) {
                     <div className="Auth-form-content">
                         <h3 className="Auth-form-title">Sign In</h3>
                         <div className="image">
-                            <img src={loginImg} />
+                            <img src={LogIn} />
                         </div>
                         <div className="text-center">
                             Not registered yet?{" "}
@@ -125,7 +140,7 @@ export default function Atuh(props) {
                 <div className="Auth-form-content">
                     <h3 className="Auth-form-title">Sign Up</h3>
                     <div className="image">
-                        <img src={reg} />
+                        <img src={SignUp} />
                     </div>
                     <div className="text-center">
                         Already registered?{" "}
